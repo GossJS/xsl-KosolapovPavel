@@ -19,8 +19,8 @@
         <mfrac>
             <xsl:apply-templates/>
         </mfrac>
-
-    </xsl:template>    <xsl:template match="корень">
+    </xsl:template>    
+    <xsl:template match="корень">
         <msqrt>
             <xsl:apply-templates/>
         </msqrt>
