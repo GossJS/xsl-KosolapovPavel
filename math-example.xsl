@@ -15,3 +15,23 @@
                 </math>
             </body>
         </html>
+    <xsl:template match="дробь">
+        <mfrac>
+            <xsl:apply-templates/>
+        </mfrac>
+
+    </xsl:template>    <xsl:template match="корень">
+        <msqrt>
+            <xsl:apply-templates/>
+        </msqrt>
+    </xsl:template>
+    <xsl:template match="низ">
+        <msub>
+            <xsl:apply-templates/>
+        </msub>
+    </xsl:template>
+    <xsl:template match="низверх">
+        <munderover>
+            <xsl:apply-templates/>
+        </munderover>
+    </xsl:template>
