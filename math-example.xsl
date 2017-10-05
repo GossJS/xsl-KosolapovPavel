@@ -19,7 +19,7 @@
         <mfrac>
             <xsl:apply-templates/>
         </mfrac>
-    </xsl:template>    
+    </xsl:template>
     <xsl:template match="корень">
         <msqrt>
             <xsl:apply-templates/>
@@ -35,3 +35,24 @@
             <xsl:apply-templates/>
         </munderover>
     </xsl:template>
+    <xsl:template match="операнд">
+        <mi>
+            <xsl:value-of select="."/>
+        </mi>
+    </xsl:template>
+    <xsl:template match="оператор">
+        <mo>
+            <xsl:value-of select="."/>
+        </mo>
+    </xsl:template>
+    <xsl:template match="строка">
+        <mrow>
+            <xsl:apply-templates/>
+        </mrow>
+    </xsl:template>
+    <xsl:template match="число">
+        <mn>
+            <xsl:value-of select="."/>
+        </mn>
+    </xsl:template>
+</xsl:stylesheet>
